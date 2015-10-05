@@ -3,7 +3,7 @@ Meteor.methods({
     var twilio = Twilio(Meteor.settings.twilio.ACCOUNT_SID, Meteor.settings.twilio.AUTH_TOKEN);
     twilio.sendMessage({
 
-        to:'+14106938857', // Any number Twilio can deliver to
+        to:'+19407688821', // Any number Twilio can deliver to
         from: '+16467985534', // A number you bought from Twilio and can use for outbound communication
         body: 'Sam Get me a Beer -Luv '+homie+'.' // body of the SMS message
 

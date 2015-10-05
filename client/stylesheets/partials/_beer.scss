@@ -26,7 +26,7 @@ body {
 input {
   display: inline-block;
   width: 300px;
-  @include pad(20px);
+  padding: 20px;
   border: none;
   opacity: 1;
   background: rgba(255,255,255,.5);
@@ -37,7 +37,7 @@ input {
 button {
  cursor: pointer;
   width: 300px;
-  @include pad(20px);
+  padding: 20px;
   border: none;
   opacity: .8;
   background: url('./assets/beer.jpg');
