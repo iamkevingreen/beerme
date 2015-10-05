@@ -1,0 +1,49 @@
+body {
+  background: #60AA85;
+  position: absolute;
+  overflow:hidden;
+  left: 20%;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  font-family: 'Open Sans', sans-serif;
+  background: url('./assets/beer.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: white;
+}
+
+.vertical-align {
+  text-align: center;
+  position: relative;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+input {
+  display: inline-block;
+  width: 300px;
+  @include pad(20px);
+  border: none;
+  opacity: 1;
+  background: rgba(255,255,255,.5);
+  margin-bottom: 4px;
+  text-align: center;
+  font-size: 18px;
+}
+button {
+ cursor: pointer;
+  width: 300px;
+  @include pad(20px);
+  border: none;
+  opacity: .8;
+  background: url('./assets/beer.jpg');
+  background-size: 1770px 630px;
+  background-position: -330px -139px;
+
+  text-align: center;
+  font-size: 18px;
+}
