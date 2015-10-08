@@ -5,7 +5,7 @@ Meteor.methods({
     twilio.sendMessage({
 
         to:'+1'+obj.number, // Any number Twilio can deliver to
-        from: '+16467985534', // A number you bought from Twilio and can use for outbound communication
+        from: Meteor.settings.twilio.NUMBER, // A number you bought from Twilio and can use for outbound communication
         body: obj.name+ ' Get me a Beer -Luv '+obj.message+'.' // body of the SMS message
 
     }, function(err, responseData) { //this function is executed when a response is received from Twilio
