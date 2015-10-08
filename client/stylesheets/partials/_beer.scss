@@ -2,10 +2,11 @@ body {
   background: #60AA85;
   position: absolute;
   overflow:hidden;
-  left: 20%;
+  // left: 20%;
   top: 0;
   height: 100%;
   width: 100%;
+  padding: 5%;
   font-family: 'Open Sans', sans-serif;
   background: url('./assets/beer.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -13,6 +14,15 @@ body {
   -o-background-size: cover;
   background-size: cover;
   color: white;
+  @media screen and (min-width: 500px) {
+    left: 20%;
+  }
+}
+
+h1 {
+  font-weight: 300;
+  max-width: 400px;
+  margin: 0 auto 24px;
 }
 
 .vertical-align {
@@ -23,7 +33,7 @@ body {
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
 }
-input {
+input, textarea {
   display: inline-block;
   width: 300px;
   padding: 20px;
@@ -31,14 +41,21 @@ input {
   opacity: 1;
   background: rgba(255,255,255,.5);
   margin-bottom: 4px;
-  text-align: center;
+  text-align: left;
   font-size: 18px;
+  &.error {
+    background: rgba(0,0,0,.7);
+    border:2px solid rgb(235, 73, 50);
+  }
 }
 button {
  cursor: pointer;
   width: 300px;
   padding: 20px;
   border: none;
+  font-weight: 700;
+  color: white;
+  text-transform: uppercase;
   opacity: .8;
   background: url('./assets/beer.jpg');
   background-size: 1770px 630px;

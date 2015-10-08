@@ -1,11 +1,12 @@
 Meteor.methods({
-  sendText: function(homie) {
+  sendText: function(obj) {
+    check(obj, Object)
     var twilio = Twilio(Meteor.settings.twilio.ACCOUNT_SID, Meteor.settings.twilio.AUTH_TOKEN);
     twilio.sendMessage({
 
-        to:'+19407688821', // Any number Twilio can deliver to
+        to:'+1'+obj.number, // Any number Twilio can deliver to
         from: '+16467985534', // A number you bought from Twilio and can use for outbound communication
-        body: 'Sam Get me a Beer -Luv '+homie+'.' // body of the SMS message
+        body: obj.name+ ' Get me a Beer -Luv '+obj.message+'.' // body of the SMS message
 
     }, function(err, responseData) { //this function is executed when a response is received from Twilio
 

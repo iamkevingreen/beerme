@@ -5,12 +5,16 @@
 
 <body>
   <div class="vertical-align">
-    <h1>Sam I need a Beer!!!</h1>
+    <h1>You could probably use a beer, but fuck doing that yourself.</h1>
     {{> beer}}
   </div>
 </body>
 
 <template name="beer">
-  <input name="homie" placeholder="Who Are You?" /><br />
-  <button>Sam Get me a Beer</button>
+  <form id="getmebeer">
+    <input name="name" id="name" placeholder="Friends Name" /><br />
+    <input name="number" id="number" placeholder="Friends Number" /><br />
+    <textarea name="message" id="message" placeholder="Message"></textarea><br />
+    <button type="submit">Dude get me a beer</button>
+  </form>
 </template>
