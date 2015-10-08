@@ -46,8 +46,8 @@ Template.beer.rendered = function() {
           console.log(err);
         } else {
           console.log(result);
-          $('input').remove();
-          $('textarea').remove();
+          $('input').val("");
+          $('textarea').val("");
           $('button').css('opacity', .2);
           $('button').after("<h2>Text Sent!</h2>");
         }
