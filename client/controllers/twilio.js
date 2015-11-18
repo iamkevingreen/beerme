@@ -16,8 +16,7 @@ Template.beer.rendered = function() {
         required: true
       },
       number: {
-        required: true,
-        number: true
+        required: true
       },
       message: {
         required: true
@@ -28,17 +27,17 @@ Template.beer.rendered = function() {
         required: ""
       },
       number: {
-        required: "",
-        number: ""
+        required: ""
       },
       message: {
         required: ""
       }
     },
     submitHandler: function() {
+      var number = $('#number').val();
       var object = {
           'name': $('#name').val(),
-          'number': $('#number').val(),
+          'number': number,
           'message': $('#message').val(),
       }
       Meteor.call('sendText', object, function(err, result) {

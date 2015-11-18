@@ -1,7 +1,7 @@
 body {
   background: #60AA85;
-  position: absolute;
-  overflow:hidden;
+  // position: absolute;
+  // overflow:hidden;
   // left: 20%;
   top: 0;
   height: 100%;
@@ -27,11 +27,15 @@ h1 {
 
 .vertical-align {
   text-align: center;
-  position: relative;
-  top: 50%;
-  -ms-transform: translateY(-50%);
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
+  height: 100vh;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  // position: relative;
+  // top: 50%;
+  // -ms-transform: translateY(-50%);
+  // -webkit-transform: translateY(-50%);
+  // transform: translateY(-50%);
 }
 input, textarea {
   display: inline-block;
@@ -39,12 +43,12 @@ input, textarea {
   padding: 20px;
   border: none;
   opacity: 1;
-  background: rgba(255,255,255,.5);
+  background: rgba(255,255,255,.8);
   margin-bottom: 4px;
   text-align: left;
   font-size: 18px;
   &.error {
-    background: rgba(0,0,0,.7);
+    background: rgba(255,255,255,.7);
     border:2px solid rgb(235, 73, 50);
   }
 }
