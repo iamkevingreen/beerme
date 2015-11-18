@@ -3,10 +3,6 @@ body {
   // position: absolute;
   // overflow:hidden;
   // left: 20%;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  padding: 5%;
   font-family: 'Open Sans', sans-serif;
   background: url('./assets/beer.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -28,6 +24,7 @@ h1 {
 .vertical-align {
   text-align: center;
   height: 100vh;
+  justify-content: flex-end;
   display: flex;
   width: 100%;
   align-items: center;
