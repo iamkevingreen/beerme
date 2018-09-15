@@ -80,7 +80,7 @@ module.exports = (
           Ayo get me a beer
         </h2>
         <div class='content'>
-          Enter your friends name and numbers to text them for a beer
+          Enter your friends name and number to text them for a beer
         </div>
         <div style='margin-top: 20px;'>
           <form id='form'>
