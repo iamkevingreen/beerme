@@ -2,79 +2,82 @@
 module.exports = (
   `
     <div>
-      <link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
-      <style>
-        * {
-          box-sizing: border-box;
-        }
-        body, html {
-          font-family: 'Space Mono';
-        }
-        h2 {
-          font-family: 'Space Mono', monospace;
-        }
-        .container {
-          max-width: 500px;
-          margin: 0 auto;
-          padding: 20px;
-        }
-        .content {
-          padding-top: 30px;
-        }
-        a {
-          color: #000;
-        }
-        svg {
-          width: 30px;
-          height: 30px;
-        }
-        .nounderline {
-          text-decoration: none;
-        }
-        .mt1 {
-          margin-top: 1rem;
-        }
-        .ml05 {
-          margin-left: 0.5rem;
-        }
-        .s-i {
-          font-family: 'Space Mono';
-          outline: none;
-          padding: 1rem;
-        }
-        .s-s {
-          width: 32%;
-        }
-        .logger {
-          width: 100%;
-          margin-top: 30px;
-          height: 140px;
-          padding: 5px;
-          overflow: scroll;
-          background-color: #000;
-        }
-        .logger span {
-          font-size: 0.7rem;
-          color: white;
-          display: block;
-        }
-        .logger span.error {
-          color: red;
-        }
-        .logger span.success {
-          color: green;
-        }
-        form label span {
-          padding-bottom: 30px;
-        }
-        form button {
-          border: 0;
-          cursor: pointer;
-          padding: 12px 18px;
-          background-color: black;
-          color: white;
-        }
-      </style>
+      <head>
+        <title>yoooo beer</title>
+        <link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
+        <style>
+          * {
+            box-sizing: border-box;
+          }
+          body, html {
+            font-family: 'Space Mono';
+          }
+          h2 {
+            font-family: 'Space Mono', monospace;
+          }
+          .container {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+          }
+          .content {
+            padding-top: 30px;
+          }
+          a {
+            color: #000;
+          }
+          svg {
+            width: 30px;
+            height: 30px;
+          }
+          .nounderline {
+            text-decoration: none;
+          }
+          .mt1 {
+            margin-top: 1rem;
+          }
+          .ml05 {
+            margin-left: 0.5rem;
+          }
+          .s-i {
+            font-family: 'Space Mono';
+            outline: none;
+            padding: 1rem;
+          }
+          .s-s {
+            width: 32%;
+          }
+          .logger {
+            width: 100%;
+            margin-top: 30px;
+            height: 140px;
+            padding: 5px;
+            overflow: scroll;
+            background-color: #000;
+          }
+          .logger span {
+            font-size: 0.7rem;
+            color: white;
+            display: block;
+          }
+          .logger span.error {
+            color: red;
+          }
+          .logger span.success {
+            color: green;
+          }
+          form label span {
+            padding-bottom: 30px;
+          }
+          form button {
+            border: 0;
+            cursor: pointer;
+            padding: 12px 18px;
+            background-color: black;
+            color: white;
+          }
+        </style>
+      </head>
       <div class='container'>
         <h2>
           Ayo get me a beer
