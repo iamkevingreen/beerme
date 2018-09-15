@@ -32,6 +32,14 @@ serverRouter.post('/api/text', (req, res) => {
       }))
       res.end()
     })
+    .catch((error) => {
+      res.write(JSON.stringify({
+        error: error,
+        data: textInfo,
+        reason: 'invalid phone number'
+      }))
+      res.end()
+    })
 })
 
 serverRouter.get('*', (req, res) => {
