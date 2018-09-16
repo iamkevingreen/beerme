@@ -12,10 +12,11 @@ const landing = require('./landing.js')
 
 const { PORT } = process.env
 
+const twilioAPI = Twilio(process.env.TWILIO_ACCOUNT_SID, process.env.TWILIO_AUTH_TOKEN)
+
 serverRouter.post('/api/text', (req, res) => {
   const textInfo = req.body
 
-  const twilioAPI = Twilio(process.env.TWILIO_ACCOUNT_SID, process.env.TWILIO_AUTH_TOKEN)
   res.writeHead(200, {
     'Content-Type': 'application/json'
   })
@@ -25,7 +26,6 @@ serverRouter.post('/api/text', (req, res) => {
     body: `${textInfo.name} get me a beer fam`
   })
     .then((message) => {
-      console.log(message.sid)
       res.write(JSON.stringify({
         error: false,
         data: textInfo
@@ -40,6 +40,29 @@ serverRouter.post('/api/text', (req, res) => {
       }))
       res.end()
     })
+})
+
+serverRouter.get('/api/responses', (req, res) => {
+  let messagesLog = []
+  res.writeHead(200, {
+    'Content-Type': 'application/json'
+  })
+
+  var promise = twilioAPI.messages.each(messages => {
+    let message = {
+      from: messages.from,
+      body: messages.body
+    }
+  })
+
+  promise.then((res) => {
+    console.log('res', res)
+  })
+
+  res.write(JSON.stringify({
+    data: messagesLog
+  }))
+  res.end()
 })
 
 serverRouter.get('*', (req, res) => {

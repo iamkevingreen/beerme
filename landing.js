@@ -111,6 +111,11 @@ module.exports = (
         </div>
       </div>
       <script>
+        fetch('/api/responses')
+        .then(response => response.json())
+        .then((json) => {
+          console.log('hey?', JSON.stringify(json))
+        })
         function toJSONString( form ) {
           var obj = {};
           var elements = form.querySelectorAll( "input, select, textarea" );
